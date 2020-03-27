@@ -1,0 +1,23 @@
+{
+  "name": "data-structures",
+  "version": "1.0.0",
+  "description": "Simple data structures. Not very fast or anything.",
+  "main": "dist/Main.js",
+  "scripts": {
+    "build": "tsc",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koreanmelon/data-structures.git"
+  },
+  "author": "koreanmelon <peterkim426@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/koreanmelon/data-structures/issues"
+  },
+  "homepage": "https://github.com/koreanmelon/data-structures#readme",
+  "dependencies": {
+    "vanilla-latte-ts": "^1.1.1"
+  }
+}
