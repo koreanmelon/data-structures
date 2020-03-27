@@ -8,6 +8,7 @@ export declare class LinkedList implements List {
     set head(v: any);
     get tail(): LinkedList | undefined;
     set tail(v: LinkedList | undefined);
+    length(): number;
     push(value: any): void;
     get(index: number): any;
 }

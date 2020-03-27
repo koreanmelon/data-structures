@@ -18,6 +18,6 @@
   },
   "homepage": "https://github.com/koreanmelon/data-structures#readme",
   "dependencies": {
-    "vanilla-latte-ts": "^1.1.1"
+    "vanilla-latte-ts": "^1.1.6"
   }
 }

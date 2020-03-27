@@ -14,9 +14,27 @@ require("vanilla-latte-ts");
 const Decorators_1 = require("vanilla-latte-ts/dist/Decorators");
 const Assert_1 = require("vanilla-latte-ts/dist/Assert");
 let LinkedListTest = class LinkedListTest {
-    testAdd() {
+    testPush() {
+        var _a;
         let test = new LinkedList_1.LinkedList(2);
-        Assert_1.assertEquals(2, test.head);
+        Assert_1.assertEquals(2, test.head, "testPush", 0);
+        test.push(3);
+        Assert_1.assertEquals(3, (_a = test.tail) === null || _a === void 0 ? void 0 : _a.head, "testPush", 0);
+    }
+    testLength() {
+        let test = new LinkedList_1.LinkedList(1);
+        test.push(2);
+        test.push(3);
+        test.push(4);
+        Assert_1.assertEquals(4, test.length(), "length", 0);
+    }
+    testGet() {
+        let test = new LinkedList_1.LinkedList(1);
+        test.push(2);
+        test.push(3);
+        test.push(4);
+        Assert_1.assertEquals(2, test.get(1), "testGet", 0);
+        Assert_1.assertEquals(4, test.get(3), "testGet", 0);
     }
 };
 __decorate([
@@ -24,7 +42,19 @@ __decorate([
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
-], LinkedListTest.prototype, "testAdd", null);
+], LinkedListTest.prototype, "testPush", null);
+__decorate([
+    Decorators_1.Test,
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], LinkedListTest.prototype, "testLength", null);
+__decorate([
+    Decorators_1.Test,
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", void 0)
+], LinkedListTest.prototype, "testGet", null);
 LinkedListTest = __decorate([
     Decorators_1.ClassTest
 ], LinkedListTest);
