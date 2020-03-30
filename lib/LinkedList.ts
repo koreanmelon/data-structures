@@ -52,10 +52,10 @@ export class LinkedList implements List {
         let repr = "LinkedList ["
         let tempList: LinkedList | any = this;
         while (tempList._tail != null) {
-            repr += ` \x1b[33m${tempList._head}\x1b[0m,`;
+            repr += ` ${tempList._head},`;
             tempList = tempList._tail;
         }
-        repr += ` \x1b[33m${tempList._head}\x1b[0m ]`;
+        repr += ` ${tempList._head} ]`;
         return repr;
     }
 
