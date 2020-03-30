@@ -4,9 +4,10 @@ import { LinkedList } from "./LinkedList";
 
 export class IntList extends LinkedList {
 
-    constructor(head: any);
-    constructor(head: any, tail: LinkedList);
+    constructor(head: number);
+    constructor(head: number, tail: IntList);
     constructor(head: number, tail?: IntList) {
+        if (!Number.isInteger(head)) { throw new Error("head must be an integer."); }
         if (tail) {
             super(head, tail);
         } else {
