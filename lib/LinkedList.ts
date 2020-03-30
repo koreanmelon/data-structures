@@ -1,10 +1,9 @@
 import { List } from "./List";
+import util from "util";
 
 export class LinkedList implements List {
 
-
     private _head: any;
-
     private _tail: LinkedList | undefined;
 
     constructor(head: any);
@@ -36,6 +35,7 @@ export class LinkedList implements List {
         }
         tempList._tail = new LinkedList(value);
     }
+
     get(index: number) {
         if (index >= this.length()) {
             throw new Error("Index out of bounds.");
@@ -46,6 +46,17 @@ export class LinkedList implements List {
             tempList = tempList._tail;
         }
         return tempList._head;
+    }
+
+    [util.inspect.custom]() {
+        let repr = "LinkedList ["
+        let tempList: LinkedList | any = this;
+        while (tempList._tail != null) {
+            repr += ` \x1b[33m${tempList._head}\x1b[0m,`;
+            tempList = tempList._tail;
+        }
+        repr += ` \x1b[33m${tempList._head}\x1b[0m ]`;
+        return repr;
     }
 
 }

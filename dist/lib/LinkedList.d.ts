@@ -1,4 +1,6 @@
+/// <reference types="node" />
 import { List } from "./List";
+import util from "util";
 export declare class LinkedList implements List {
     private _head;
     private _tail;
@@ -11,4 +13,5 @@ export declare class LinkedList implements List {
     length(): number;
     push(value: any): void;
     get(index: number): any;
+    [util.inspect.custom](): string;
 }
