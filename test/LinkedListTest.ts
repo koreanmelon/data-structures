@@ -22,7 +22,7 @@ class LinkedListTest {
         test.push(2);
         test.push(3);
         test.push(4);
-        assertEquals(4, test.length(), "length", 0);
+        assertEquals(4, test.length, "length", 0);
 
     }
 

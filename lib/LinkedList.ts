@@ -18,7 +18,7 @@ export class LinkedList implements List {
     public get tail(): LinkedList | undefined { return this._tail; }
     public set tail(v: LinkedList | undefined) { this._tail = v; }
 
-    length() {
+    get length() {
         let tempList: any = this;
         let count = 0;
         while (tempList != null) {
@@ -37,7 +37,7 @@ export class LinkedList implements List {
     }
 
     get(index: number) {
-        if (index >= this.length()) {
+        if (index >= this.length) {
             throw new Error("Index out of bounds.");
         }
         let tempList: any = this;
